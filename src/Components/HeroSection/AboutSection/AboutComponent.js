@@ -11,7 +11,7 @@ const Bgwrapper =  styled('div')({
 const  AboutComponent = () => {
   return (
     <Bgwrapper>
-        <h1>About Me</h1>
+        <h1>About Me..</h1>
     </Bgwrapper>
   
   )
