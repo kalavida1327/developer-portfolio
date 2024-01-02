@@ -1,6 +1,7 @@
-import { styled } from '@mui/system';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
 
 export const CustomShapeComponentWrapper = styled('div')({
   perspective: '30rem', // Apply perspective to the parent element
@@ -89,4 +90,50 @@ export const WhiteIcon = styled('span')({
 
 export const MBBox = styled(Box)`
   margin-bottom: 4px;
+`;
+
+export const StyledIcon = styled(Grid)`
+  width: 64px;
+  height: 48px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  color: ${(props) => (props.islightmode ? 'white' : 'black')};
+  @media (max-width: 600px) {
+    padding-top: 12px;
+  }
+`;
+
+export const IconGrid = styled(Grid)`
+  margin-bottom: 5px;
+  background-color: ${(props) => (props.islightmode ? 'black' : 'white')};
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const IconOuterBox = styled(Box)`
+  border: 2px solid #ffff00;
+  /* border: 2px solid red; */
+`;
+
+export const SidebarGrid = styled(Grid)`
+  position: absolute;
+  left: 56px;
+  top: 88px;
+  display: flex;
+  z-index: 1;
+  width: min-content;
+  transform: skewY(-4deg);
+  @media (max-width: 600px) {
+    /* left: 0; // Change the styles for small screens
+    top: 0; */
+  }
+`;
+
+export const IconOuterGrid = styled(Grid)`
+  transform: rotateY(16deg);
+  position: relative;
+  bottom: 12px;
+  left: 8px;
 `;
