@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useDispatch, useSelector } from 'react-redux';
 import SendIcon from '@mui/icons-material/SendOutlined';
+import { setIsLightMode } from './store/sideNavbarSlice';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeIcon from '@mui/icons-material/LightModeOutlined';
 import SummarizeIcon from '@mui/icons-material/SummarizeOutlined';
 import FolderOpenIcon from '@mui/icons-material/FolderOpenOutlined';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutlineOutlined';
+import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaicOutlined';
 import {
   IconGrid,
   IconOuterBox,
   IconOuterGrid,
   StyledIcon,
 } from '../../../Common/styled';
-import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaicOutlined';
 
 const SideNavbar = () => {
-  const [isLightMode, setIsLightMode] = useState(true);
+  const dispatch = useDispatch();
+  const isLightMode = useSelector(
+    (state) => state.rootReducer.sideNavbar.isLightMode
+  );
 
   const handleClick = () => {
-    setIsLightMode((prevMode) => !prevMode);
+    dispatch(setIsLightMode());
   };
+
   return (
     <IconOuterBox>
       <IconOuterGrid container>
