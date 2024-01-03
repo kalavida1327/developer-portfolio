@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
+import { Paper, Typography } from '@mui/material';
 
 export const CustomShapeComponentWrapper = styled('div')({
   perspective: '30rem', // Apply perspective to the parent element
@@ -137,3 +138,64 @@ export const IconOuterGrid = styled(Grid)`
   bottom: 12px;
   left: 8px;
 `;
+
+export const TitleTypo = styled(Typography)({
+  color: 'white',
+  fontSize: '25px',
+  fontFamily: 'Syne',
+  position: 'relative', 
+  textAlign: 'left',
+  margin: '8px',
+  fontWeight: 700, 
+  paddingBottom: '10px' 
+});
+export const SubTitleTypo = styled(Typography)({
+  color: 'white',
+  fontSize: '20px',
+  fontFamily: 'Syne',
+  position: 'relative', 
+  textAlign: 'left',
+  margin: '8px',
+  fontWeight: 500, 
+  paddingBottom: '10px', 
+  textAlign: "center",
+});
+
+export const DemoPaper = styled(Paper)({
+  width: "800px",
+  height: '665px',
+  background: 'black',
+  overflowY: 'scroll',
+  marginLeft: "580px",
+  color: 'yellow',
+  marginTop: '-555px'
+});
+
+export const PolyBox = styled(Box)(({ theme }) => ({
+  height: '60px',
+  width: '55px',
+  backgroundColor: 'yellow',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  clipPath: 'polygon(15% 0%,100% 0%,85% 100%,0% 100%)',
+}));
+
+export const TextDataTypo = styled(Typography)({
+  background: "yellow",
+  color: 'black',
+  width: '80px',
+  clipPath: 'polygon(5% 0%,100% 0%,95% 100%,0% 100%)',
+  marginTop: '10px',
+  marginLeft: '20px'
+});
+
+export const TextDataTypo1 = styled(Typography)({
+  background: "yellow",
+  color: 'black',
+  width: '110px',
+  clipPath: 'polygon(5% 0%,100% 0%,95% 100%,0% 100%)',
+  marginTop: '10px',
+  marginLeft: '10px'
+});
+
