@@ -1,13 +1,14 @@
 import './App.css';
+import { WrapperContainer } from './Common/styled';
 import AboutComponent from './Components/HeroSection/AboutSection/AboutComponent';
 import CustomShapeComponent from './Components/HeroSection/CustomShapeComponent';
 
 function App() {
   return (
-    <div className="App">
-     <CustomShapeComponent/>
-     <AboutComponent/>
-    </div>
+    <WrapperContainer className='App'>
+      <CustomShapeComponent />
+      <AboutComponent />
+    </WrapperContainer>
   );
 }
 

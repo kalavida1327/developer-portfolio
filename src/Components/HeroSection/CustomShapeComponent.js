@@ -7,11 +7,12 @@ import GetAppIcon from '@mui/icons-material/GetApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import CustomShapeImage from '../../Assets/Images/hero.png';
+import CustomShapeImage from '../../Assets/Images/Hero1.jpg';
 import {
   CustomShapeComponentWrapper,
   DownloadButton,
   HeroDetails,
+  HeroName,
   HeroProfession,
   Image,
   ImageContainer,
@@ -22,10 +23,13 @@ import {
   SocialIcons,
   WhiteIcon,
 } from '../../Common/styled';
+import DividerLine from '../../Common/DividerLine';
+import TextAnimation from '../../Common/TextAnimation';
 
 // Create a styled component for the entire CustomShapeComponent
 
 const CustomShapeComponent = () => {
+  const words = ['Software_Developer', 'Web_Developer'];
   return (
     <Grid container>
       <SidebarGrid item xs={12} sm={4} md={12}>
@@ -34,36 +38,34 @@ const CustomShapeComponent = () => {
       <Grid item xs={12} sm={8} md={12}>
         <CustomShapeComponentWrapper>
           <ImageContainer>
-            <Image src={CustomShapeImage} alt="Your Image" />
+            <Image src={CustomShapeImage} alt='Your Image' />
             <Overlay />
             <HeroDetails>
               <PersonalDetails>
-                <Typography variant="h5">KUNG-FU PANDA</Typography>
+                <HeroName variant='h5'>Hampton Ryan </HeroName>
                 <MBBox />
-                <HeroProfession>software developer</HeroProfession>
+                <TextAnimation words={words}></TextAnimation>
                 <SocialIcons>
-                  <IconButton color="primary" aria-label="instagram">
+                  <IconButton color='primary' aria-label='instagram'>
                     <WhiteIcon>
                       <InstagramIcon />
                     </WhiteIcon>
                   </IconButton>
-                  <IconButton color="primary" aria-label="linkedin">
+                  <IconButton color='primary' aria-label='linkedin'>
                     <WhiteIcon>
                       <LinkedInIcon />
                     </WhiteIcon>
                   </IconButton>
-                  <IconButton color="primary" aria-label="youtube">
+                  <IconButton color='primary' aria-label='youtube'>
                     <WhiteIcon>
                       <YouTubeIcon />
                     </WhiteIcon>
                   </IconButton>
                 </SocialIcons>
               </PersonalDetails>
-              <DownloadButton
-                variant="text"
-                color="primary"
-                endIcon={<GetAppIcon />}
-              >
+              <DividerLine />
+
+              <DownloadButton variant='text' endIcon={<GetAppIcon />}>
                 Download Resume
               </DownloadButton>
             </HeroDetails>

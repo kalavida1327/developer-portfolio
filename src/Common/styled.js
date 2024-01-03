@@ -2,7 +2,11 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import { Paper, Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
+
+export const WrapperContainer = styled('div')({
+  backgroundColor: 'black',
+});
 
 export const CustomShapeComponentWrapper = styled('div')({
   perspective: '30rem', // Apply perspective to the parent element
@@ -56,22 +60,35 @@ export const HeroDetails = styled('div')({
 
 export const PersonalDetails = styled('div')({
   position: 'relative',
-  bottom: '13px',
-});
-
-export const HeroName = styled('h1')({
-  fontSize: '36px',
-  marginBottom: '10px',
   width: '500px',
 });
 
-export const HeroProfession = styled('h3')({
-  fontSize: '18px',
-  marginBottom: '20px',
-  margin: 'auto',
-  color: 'white',
-  textShadow: '5px 2px #222324, 2px 4px #222324, 3px 5px #222324',
-});
+export const HeroName = styled(Typography)`
+  font-family: 'Roboto', sans-serif; /* Replace "Your Custom Font" with your desired font */
+  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 400;
+`;
+
+export const HeroProfession = styled(Typography)`
+  overflow: hidden;
+  display: inline-block;
+  border-right: 0.15em solid orange; /* Adjust the border styling as needed */
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.1em; /* Adjust the letter spacing as needed */
+  animation: typing 3s steps(30, end);
+  font-size: 1.125rem;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+`;
 
 export const SocialIcons = styled('div')({
   marginBottom: '20px',
@@ -83,6 +100,7 @@ export const DownloadButton = styled(Button)({
   position: 'relative',
   top: '0px',
   bottom: '20px',
+  color: 'white',
 });
 
 export const WhiteIcon = styled('span')({
@@ -116,6 +134,7 @@ export const IconGrid = styled(Grid)`
 export const IconOuterBox = styled(Box)`
   border: 2px solid #ffff00;
   /* border: 2px solid red; */
+  transform: rotateY(16deg);
 `;
 
 export const SidebarGrid = styled(Grid)`
@@ -133,7 +152,7 @@ export const SidebarGrid = styled(Grid)`
 `;
 
 export const IconOuterGrid = styled(Grid)`
-  transform: rotateY(16deg);
+  perspective: 30rem;
   position: relative;
   bottom: 12px;
   left: 8px;
@@ -143,32 +162,32 @@ export const TitleTypo = styled(Typography)({
   color: 'white',
   fontSize: '25px',
   fontFamily: 'Syne',
-  position: 'relative', 
+  position: 'relative',
   textAlign: 'left',
   margin: '8px',
-  fontWeight: 700, 
-  paddingBottom: '10px' 
+  fontWeight: 700,
+  paddingBottom: '10px',
 });
 export const SubTitleTypo = styled(Typography)({
   color: 'white',
   fontSize: '20px',
   fontFamily: 'Syne',
-  position: 'relative', 
+  position: 'relative',
   textAlign: 'left',
   margin: '8px',
-  fontWeight: 500, 
-  paddingBottom: '10px', 
-  textAlign: "center",
+  fontWeight: 500,
+  paddingBottom: '10px',
+  textAlign: 'center',
 });
 
 export const DemoPaper = styled(Paper)({
-  width: "800px",
+  width: '800px',
   height: '665px',
   background: 'black',
   overflowY: 'scroll',
-  marginLeft: "580px",
+  marginLeft: '580px',
   color: 'yellow',
-  marginTop: '-555px'
+  marginTop: '-555px',
 });
 
 export const PolyBox = styled(Box)(({ theme }) => ({
@@ -182,20 +201,19 @@ export const PolyBox = styled(Box)(({ theme }) => ({
 }));
 
 export const TextDataTypo = styled(Typography)({
-  background: "yellow",
+  background: 'yellow',
   color: 'black',
   width: '80px',
   clipPath: 'polygon(5% 0%,100% 0%,95% 100%,0% 100%)',
   marginTop: '10px',
-  marginLeft: '20px'
+  marginLeft: '20px',
 });
 
 export const TextDataTypo1 = styled(Typography)({
-  background: "yellow",
+  background: 'yellow',
   color: 'black',
   width: '110px',
   clipPath: 'polygon(5% 0%,100% 0%,95% 100%,0% 100%)',
   marginTop: '10px',
-  marginLeft: '10px'
+  marginLeft: '10px',
 });
-
