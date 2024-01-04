@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -179,16 +180,6 @@ export const SubTitleTypo = styled(Typography)({
   paddingBottom: '10px',
   textAlign: 'center',
 });
-
-// export const DemoPaper = styled(Paper)({
-//   width: "800px",
-//   height: '665px',
-//   background: 'black',
-//   overflowY: 'scroll',
-//   marginLeft: "580px",
-//   color: 'yellow',
-//   marginTop: '-555px'
-// });
 
 export const DemoPaper = styled(Paper)(({ isLightMode }) => ({
   width: "800px",
