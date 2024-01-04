@@ -37,8 +37,6 @@ const AboutComponent = () => {
     (state) => state.rootReducer.sideNavbar.isLightMode
   );
 
-  console.log('isLightMode', isLightMode);
-
   return (
     <DemoPaper isLightMode={isLightMode}>
       {/* About */}
