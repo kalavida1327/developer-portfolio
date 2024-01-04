@@ -180,15 +180,25 @@ export const SubTitleTypo = styled(Typography)({
   textAlign: 'center',
 });
 
-export const DemoPaper = styled(Paper)({
-  width: '800px',
+// export const DemoPaper = styled(Paper)({
+//   width: "800px",
+//   height: '665px',
+//   background: 'black',
+//   overflowY: 'scroll',
+//   marginLeft: "580px",
+//   color: 'yellow',
+//   marginTop: '-555px'
+// });
+
+export const DemoPaper = styled(Paper)(({ isLightMode }) => ({
+  width: "800px",
   height: '665px',
-  background: 'black',
+  background: isLightMode ? 'black' : 'white',
   overflowY: 'scroll',
   marginLeft: '580px',
   color: 'yellow',
   marginTop: '-555px',
-});
+}));
 
 export const PolyBox = styled(Box)(({ theme }) => ({
   height: '60px',
