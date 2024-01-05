@@ -4,10 +4,15 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import LockRoundedIcon from '@mui/icons-material/LockRounded';
+import PaymentRoundedIcon from '@mui/icons-material/PaymentRounded';
+import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
+import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
+import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 
-export const WrapperContainer = styled('div')({
-  backgroundColor: 'black',
-});
+export const WrapperContainer = styled('div')`
+  background-color: ${(props) => (props.islightmode ? 'black' : 'white')};
+`;
 
 export const CustomShapeComponentWrapper = styled('div')({
   perspective: '30rem', // Apply perspective to the parent element
@@ -159,30 +164,30 @@ export const IconOuterGrid = styled(Grid)`
   left: 8px;
 `;
 
-export const TitleTypo = styled(Typography)({
-  color: 'white',
-  fontSize: '25px',
-  fontFamily: 'Syne',
-  position: 'relative',
-  textAlign: 'left',
-  margin: '8px',
-  fontWeight: 700,
-  paddingBottom: '10px',
-});
-export const SubTitleTypo = styled(Typography)({
-  color: 'white',
-  fontSize: '20px',
-  fontFamily: 'Syne',
-  position: 'relative',
-  textAlign: 'left',
-  margin: '8px',
-  fontWeight: 500,
-  paddingBottom: '10px',
-  textAlign: 'center',
-});
+export const TitleTypo = styled(Typography)`
+  color: ${(props) => (props.islightmode ? 'rgba(255,255,255,.55)' : 'black')};
+  font-size: 25px;
+  font-family: 'Syne';
+  position: relative;
+  text-align: left;
+  margin: 8px;
+  font-weight: 700;
+  padding-bottom: 10px;
+`;
+
+export const SubTitleTypo = styled(Typography)`
+  color: ${(props) => (props.islightmode ? 'rgba(255,255,255,.55)' : 'black')};
+  font-size: 20px;
+  font-family: 'Syne';
+  position: relative;
+  margin: 8px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  text-align: center;
+`;
 
 export const DemoPaper = styled(Paper)(({ isLightMode }) => ({
-  width: "800px",
+  width: '800px',
   height: '665px',
   background: isLightMode ? 'black' : 'white',
   overflowY: 'scroll',
@@ -218,3 +223,19 @@ export const TextDataTypo1 = styled(Typography)({
   marginTop: '10px',
   marginLeft: '10px',
 });
+
+export const SubtextTypography = styled(Typography)`
+  color: ${(props) => (props.islightmode ? 'rgba(255,255,255,.55)' : 'black')};
+  text-align: 'center';
+`;
+
+export const OutlinedIcon = (IconComponent) => styled(IconComponent)`
+  color: black;
+  font-size: 2.1875rem;
+`;
+
+export const RoundedLockIcon = OutlinedIcon(LockRoundedIcon);
+export const RoundedPaymentIcon = OutlinedIcon(PaymentRoundedIcon);
+export const OutlinedSecurityIcon = OutlinedIcon(SecurityOutlinedIcon);
+export const RoundedTrendingUpIcon = OutlinedIcon(TrendingUpRoundedIcon);
+export const OutlinedRocketLaunchIcon = OutlinedIcon(RocketLaunchOutlinedIcon);

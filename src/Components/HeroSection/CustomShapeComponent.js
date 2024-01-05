@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import SideNavbar from './SideNavbar/SideNavbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -13,7 +12,6 @@ import {
   DownloadButton,
   HeroDetails,
   HeroName,
-  HeroProfession,
   Image,
   ImageContainer,
   MBBox,
@@ -38,25 +36,25 @@ const CustomShapeComponent = () => {
       <Grid item xs={12} sm={8} md={12}>
         <CustomShapeComponentWrapper>
           <ImageContainer>
-            <Image src={CustomShapeImage} alt='Your Image' />
+            <Image src={CustomShapeImage} alt="Your Image" />
             <Overlay />
             <HeroDetails>
               <PersonalDetails>
-                <HeroName variant='h5'>Hampton Ryan </HeroName>
+                <HeroName variant="h5">Hampton Ryan </HeroName>
                 <MBBox />
                 <TextAnimation words={words}></TextAnimation>
                 <SocialIcons>
-                  <IconButton color='primary' aria-label='instagram'>
+                  <IconButton color="primary" aria-label="instagram">
                     <WhiteIcon>
                       <InstagramIcon />
                     </WhiteIcon>
                   </IconButton>
-                  <IconButton color='primary' aria-label='linkedin'>
+                  <IconButton color="primary" aria-label="linkedin">
                     <WhiteIcon>
                       <LinkedInIcon />
                     </WhiteIcon>
                   </IconButton>
-                  <IconButton color='primary' aria-label='youtube'>
+                  <IconButton color="primary" aria-label="youtube">
                     <WhiteIcon>
                       <YouTubeIcon />
                     </WhiteIcon>
@@ -65,7 +63,7 @@ const CustomShapeComponent = () => {
               </PersonalDetails>
               <DividerLine />
 
-              <DownloadButton variant='text' endIcon={<GetAppIcon />}>
+              <DownloadButton variant="text" endIcon={<GetAppIcon />}>
                 Download Resume
               </DownloadButton>
             </HeroDetails>

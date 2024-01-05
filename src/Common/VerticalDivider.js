@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Divider from '@mui/material/Divider';
-import { Box, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export const VerticalDividerMiddle = () => {
   return (

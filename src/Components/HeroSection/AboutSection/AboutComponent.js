@@ -1,11 +1,16 @@
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import { useSelector } from 'react-redux';
 import DividerLine from '../../../Common/DividerLine';
-import LockRoundedIcon from '@mui/icons-material/LockRounded';
-import PaymentRoundedIcon from '@mui/icons-material/PaymentRounded';
-import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
-import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
+import {
+  AboutText,
+  Title1,
+  Title2,
+  Title3,
+  subTitle1,
+  subTitle2,
+  subTitle3,
+  subTitle4,
+} from '../../../Utils/Consts';
 import {
   VerticalDividerMiddle,
   ThinVerticalDivider,
@@ -19,18 +24,13 @@ import {
   PolyBox,
   TextDataTypo,
   TextDataTypo1,
+  SubtextTypography,
+  RoundedLockIcon,
+  OutlinedSecurityIcon,
+  RoundedPaymentIcon,
+  RoundedTrendingUpIcon,
+  OutlinedRocketLaunchIcon,
 } from '../../../Common/styled';
-import {
-  AboutText,
-  Title1,
-  Title2,
-  Title3,
-  subTitle1,
-  subTitle2,
-  subTitle3,
-  subTitle4,
-} from '../../../Utils/Consts';
-import { useSelector } from 'react-redux';
 
 const AboutComponent = () => {
   const isLightMode = useSelector(
@@ -40,24 +40,13 @@ const AboutComponent = () => {
   return (
     <DemoPaper isLightMode={isLightMode}>
       {/* About */}
-      <TitleTypo
-        variant="h4"
-        style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-      >
-        {Title1}
-      </TitleTypo>
+      <TitleTypo islightmode={isLightMode}>{Title1}</TitleTypo>
       <DividerLine />
       <Grid container alignItems="center" justifyContent="center" spacing={5}>
         <Grid item md={4}>
-          <Typography
-            variant="body1"
-            style={{
-              color: isLightMode ? 'rgba(255,255,255,.55)' : 'black',
-              textAlign: 'center',
-            }}
-          >
+          <SubtextTypography islightmode={isLightMode}>
             {AboutText}
-          </Typography>
+          </SubtextTypography>
         </Grid>
         <VerticalDividerMiddle />
         <Grid item md={4} sx={12}>
@@ -80,12 +69,7 @@ const AboutComponent = () => {
       </Grid>
 
       {/* My Services */}
-      <TitleTypo
-        variant="h4"
-        style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-      >
-        {Title2}
-      </TitleTypo>
+      <TitleTypo islightmode={isLightMode}>{Title2}</TitleTypo>
       <DividerLine />
       <Grid container alignItems="center" justifyContent="center" spacing={4}>
         <Grid item md={4} sx={12}>
@@ -96,24 +80,15 @@ const AboutComponent = () => {
             spacing={2}
           >
             <PolyBox>
-              <SecurityOutlinedIcon
-                fontSize="large"
-                style={{ color: 'black' }}
-              />
+              <OutlinedSecurityIcon />
             </PolyBox>
           </Grid>
-          <SubTitleTypo
-            variant="h4"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubTitleTypo islightmode={isLightMode}>
             {subTitle1.title}
           </SubTitleTypo>
-          <Typography
-            variant="body1"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubtextTypography islightmode={isLightMode}>
             {subTitle1.text}
-          </Typography>
+          </SubtextTypography>
         </Grid>
 
         <VerticalDividerMiddle style={{ height: '300px' }} />
@@ -126,21 +101,15 @@ const AboutComponent = () => {
             spacing={2}
           >
             <PolyBox>
-              <PaymentRoundedIcon fontSize="large" style={{ color: 'black' }} />
+              <RoundedPaymentIcon />
             </PolyBox>
           </Grid>
-          <SubTitleTypo
-            variant="h4"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubTitleTypo islightmode={isLightMode}>
             {subTitle2.title}
           </SubTitleTypo>
-          <Typography
-            variant="body1"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubtextTypography islightmode={isLightMode}>
             {subTitle2.text},
-          </Typography>
+          </SubtextTypography>
           <HorizontalDividerMiddle1 />
         </Grid>
       </Grid>
@@ -156,24 +125,15 @@ const AboutComponent = () => {
             spacing={2}
           >
             <PolyBox>
-              <TrendingUpRoundedIcon
-                fontSize="large"
-                style={{ color: 'black' }}
-              />
+              <RoundedTrendingUpIcon />
             </PolyBox>
           </Grid>
-          <SubTitleTypo
-            variant="h4"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubTitleTypo islightmode={isLightMode}>
             {subTitle3.title}
           </SubTitleTypo>
-          <Typography
-            variant="body1"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubtextTypography islightmode={isLightMode}>
             {subTitle3.text}
-          </Typography>
+          </SubtextTypography>
         </Grid>
 
         <VerticalDividerMiddle />
@@ -186,31 +146,19 @@ const AboutComponent = () => {
             spacing={2}
           >
             <PolyBox>
-              <LockRoundedIcon fontSize="large" style={{ color: 'black' }} />
+              <RoundedLockIcon />
             </PolyBox>
           </Grid>
-          <SubTitleTypo
-            variant="h4"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubTitleTypo islightmode={isLightMode}>
             {subTitle4.title}
           </SubTitleTypo>
-          <Typography
-            variant="body1"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubtextTypography islightmode={isLightMode}>
             {subTitle4.text}
-          </Typography>
+          </SubtextTypography>
         </Grid>
       </Grid>
 
-      <TitleTypo
-        variant="h4"
-        sx={12}
-        style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-      >
-        {Title3}
-      </TitleTypo>
+      <TitleTypo islightmode={isLightMode}>{Title3}</TitleTypo>
       <DividerLine />
       <Grid container alignItems="center" justifyContent="center" spacing={2}>
         <Grid item md={4}>
@@ -221,31 +169,22 @@ const AboutComponent = () => {
             spacing={2}
           >
             <PolyBox>
-              <RocketLaunchOutlinedIcon
-                fontSize="large"
-                style={{ color: 'black' }}
-              />
+              <OutlinedRocketLaunchIcon />
             </PolyBox>
           </Grid>
-          <Typography
-            variant="body1"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
+          <SubtextTypography islightmode={isLightMode}>
             I have rich experience in protecting valuable digital assets,
             defending against cyber threats, and ensuring compliance with data
             protection regulations.
-          </Typography>
+          </SubtextTypography>
         </Grid>
         <VerticalDividerMiddle />
         <Grid item md={4} sx={12}>
-          <Typography
-            variant="body1"
-            style={{ color: isLightMode ? 'rgba(255,255,255,.55)' : 'black' }}
-          >
-            Hello! I’m Hampton Ryan. I have rich experience in protecting
+          <SubtextTypography islightmode={isLightMode}>
+            Hello! I'm Hampton Ryan. I have rich experience in protecting
             valuable digital assets, defending against cyber threats, and
             ensuring compliance with data protection regulations.
-          </Typography>
+          </SubtextTypography>
         </Grid>
       </Grid>
     </DemoPaper>
