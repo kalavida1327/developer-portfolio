@@ -186,43 +186,47 @@ export const SubTitleTypo = styled(Typography)`
   text-align: center;
 `;
 
-export const DemoPaper = styled(Paper)(({ isLightMode }) => ({
-  width: '800px',
-  height: '665px',
-  background: isLightMode ? 'black' : 'white',
-  overflowY: 'scroll',
-  marginLeft: '580px',
-  color: 'yellow',
-  marginTop: '-555px',
-}));
+export const DemoPaper = styled(Paper)`
+  width: 800px;
+  height: 665px;
+  background: ${(props) => (props.islightMode ? 'black' : 'white')};
+  overflow-y: scroll;
+  margin-left: 580px;
+  color: yellow;
+  margin-top: -555px;
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
 
-export const PolyBox = styled(Box)(({ theme }) => ({
-  height: '60px',
-  width: '55px',
-  backgroundColor: 'yellow',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  clipPath: 'polygon(15% 0%,100% 0%,85% 100%,0% 100%)',
-}));
+  &::-webkit-scrollbar-thumb {
+    background-color: #dcdcdc;
+    border-radius: 10px;
+  }
 
-export const TextDataTypo = styled(Typography)({
-  background: 'yellow',
-  color: 'black',
-  width: '80px',
-  clipPath: 'polygon(5% 0%,100% 0%,95% 100%,0% 100%)',
-  marginTop: '10px',
-  marginLeft: '20px',
-});
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+`;
 
-export const TextDataTypo1 = styled(Typography)({
-  background: 'yellow',
-  color: 'black',
-  width: '110px',
-  clipPath: 'polygon(5% 0%,100% 0%,95% 100%,0% 100%)',
-  marginTop: '10px',
-  marginLeft: '10px',
-});
+export const PolyBox = styled(Box)`
+  height: 60px;
+  width: 55px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+`;
+
+export const TextDataTypo = styled(Typography)`
+  background: yellow;
+  color: black;
+  width: 110px;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 16px;
+`;
 
 export const SubtextTypography = styled(Typography)`
   color: ${(props) => (props.islightmode ? 'rgba(255,255,255,.55)' : 'black')};

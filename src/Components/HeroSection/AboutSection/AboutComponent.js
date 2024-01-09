@@ -23,7 +23,6 @@ import {
   DemoPaper,
   PolyBox,
   TextDataTypo,
-  TextDataTypo1,
   SubtextTypography,
   RoundedLockIcon,
   OutlinedSecurityIcon,
@@ -38,7 +37,7 @@ const AboutComponent = () => {
   );
 
   return (
-    <DemoPaper isLightMode={isLightMode}>
+    <DemoPaper islightMode={isLightMode}>
       {/* About */}
       <TitleTypo islightmode={isLightMode}>{Title1}</TitleTypo>
       <DividerLine />
@@ -49,21 +48,21 @@ const AboutComponent = () => {
           </SubtextTypography>
         </Grid>
         <VerticalDividerMiddle />
-        <Grid item md={4} sx={12}>
-          <Grid container spacing={1}>
+        <Grid item md={4} sx={12} textAlign="start">
+          <Grid container item>
             <TextDataTypo> Age: </TextDataTypo>
             <ThinVerticalDivider />
           </Grid>
-          <Grid container>
-            <TextDataTypo1> Residence: </TextDataTypo1>
+          <Grid container item>
+            <TextDataTypo> Residence: </TextDataTypo>
             <ThinVerticalDivider />
           </Grid>
-          <Grid container>
-            <TextDataTypo1> Freelance: </TextDataTypo1>
+          <Grid container item>
+            <TextDataTypo> Freelance: </TextDataTypo>
             <ThinVerticalDivider />
           </Grid>
-          <Grid container>
-            <TextDataTypo1>Address: </TextDataTypo1>
+          <Grid container item>
+            <TextDataTypo>Address: </TextDataTypo>
           </Grid>
         </Grid>
       </Grid>
